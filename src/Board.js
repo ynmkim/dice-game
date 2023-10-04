@@ -1,6 +1,11 @@
 import Dice from "./Dice";
 
-function Board({name, color, num, sum, gameHistory}) { 
+function Board({ name, color, gameHistory }) { 
+  const num = gameHistory[gameHistory.length - 1] || 1; // ? 이해가 안감
+  const sum = gameHistory.reduce((a, b) => a + b, 0); // 배열.reduce((acc, el, i, arr) => { return nextAccValue; }, initialAccValue);
+
+  // console.log(gameHistory, gameHistory.length - 1)
+  
   return (
     <div>
       <h2>{name}</h2>
