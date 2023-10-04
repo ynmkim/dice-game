@@ -8,7 +8,7 @@ function random(n) {
 
 function App() { 
   // 각 컴포넌트의 State를 한 곳에서 관리하고 싶다면 부모 컴포넌트의 State로 옮겨서 Props로 내려줄 수 있음
-  
+
   const [myHistory, setMyHistory] = useState([]);
   const [otherHistory, setOtherHistory] = useState([]);
   // 첫 번째 요소는 state 값 : 현재 변수의 값을 나타냄
@@ -34,8 +34,8 @@ function App() {
   return (
     <div>
       <div>
-        <Button onClick={handleRollClick}>던지기</Button>
-        <Button onClick={handleClearClick}>처음부터</Button>
+        <Button color="blue" onClick={handleRollClick}>던지기</Button>
+        <Button color="red" onClick={handleClearClick}>처음부터</Button>
       </div>
       <div> 
         <Board name="나" color="blue" gameHistory={myHistory} />
